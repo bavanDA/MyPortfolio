@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={28} className="text-dark-icon" /> : <Menu size={28}className="text-dark-icon" />}
           </button>
         </div>
       </div>

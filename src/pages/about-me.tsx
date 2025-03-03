@@ -1,0 +1,99 @@
+import React, { useState, useEffect } from "react";
+import girlAvatar from "@/assets/girl-avatar.png";
+
+const AboutMe: React.FC = () => {
+  const [displayedText, setDisplayedText] = useState("creating tools");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isReplacing, setIsReplacing] = useState(false);
+  const staticText = "Creating tools that ";
+  const textParts = [
+    "make things easier 💻✨",
+    "save time ⏳⚡",
+    "improve workflows 🛠️⚙️",
+  ];
+
+  // Typing effect function
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      const currentText = textParts[currentTextIndex];
+      if (displayedText.length < staticText.length + currentText.length) {
+        setDisplayedText(
+          (prev) => prev + currentText[displayedText.length - staticText.length]
+        );
+      } else if (
+        displayedText.length === staticText.length + currentText.length &&
+        !isReplacing
+      ) {
+        setIsReplacing(true); // Start replacing
+        setTimeout(() => {
+          setDisplayedText(staticText);
+          setIsReplacing(false);
+          setCurrentTextIndex(
+            (prevIndex) => (prevIndex + 1) % textParts.length
+          ); // Move to next part
+        }, 1500); // Pause before replacing
+      }
+    }, 100); // Speed of typing effect
+
+    return () => clearInterval(typingInterval);
+  }, [displayedText, currentTextIndex, isReplacing]);
+
+  return (
+    <section
+      id="about-me"
+      className="min-h-screen flex items-center justify-center py-12 dark:bg-gray-900 transition-colors"
+    >
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
+        {/* Left Side: Text Content */}
+        <div className="md:w-1/2 text-center pr-10 pl-10 md:text-left md:ml-20 text-gray-800 dark:text-gray-200 ">
+          <h1 className="text-4xl font-bold mb-4 dark:text-glow">
+            Hi, I'm Bavan DA
+          </h1>
+          <h2 className="text-xl font-semibold mb-4 dark:text-glow">
+            Software Engineer with over 4 Years of Experience{" "}
+            <span className="animate-pulse">🚀</span>
+          </h2>
+          <h1 className="text-lg font-medium mb-6 dark:text-glow">
+            {displayedText}
+            <span className="animate-blinkCaret">|</span> {/* Blinking caret */}
+          </h1>
+
+          {/* <a
+            href="/path/to/your/resume.pdf" // Update this path to your resume file
+            download
+            className="inline-block mt-4 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
+          >
+            Download Resume
+          </a> */}
+
+          <a
+            href="/Resume.pdf"
+            download
+            className="relative inline-block text-lg group"
+          >
+            <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight  text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+              <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+              <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 dark:bg-gray-600 bg-gray-900 group-hover:-rotate-180 ease"></span>
+              <span className="relative">Download CV</span>
+            </span>
+            <span
+              className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear dark:bg-gray-600 bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+              data-rounded="rounded-lg"
+            ></span>
+          </a>
+        </div>
+
+        {/* Right Side: Image */}
+        <div className="md:w-1/2 flex justify-center md:pr-10">
+          <img
+            src={girlAvatar}
+            alt="Girl coding"
+            className="w-64 h-64 object-cover transition-all"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutMe;
