@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <section id="my-projects" className="h-screen bg-gray-200 p-10">
         My Projects
       </section>
-      <section id="work-experience" className=" bg-gray-300 ">
+      <section id="work-experience" className="dark:bg-gray-900">
         <WorkExperience />
       </section>
       <section id="contact-me" className="h-screen bg-gray-400 p-10">
