@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { experiences } from "@/data/experience";
+import TextSeparator from "@/components/text-separator";
 
 const WorkExperience: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-8 dark:bg-gray-900">
-      <h2 className="text-2xl font-bold text-center mb-8 dark:text-gray-200">
-        Work Experience
-      </h2>
+      <TextSeparator text="Work Experience" />
 
       {experiences.map((exp) => (
         <div
