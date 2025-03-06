@@ -41,7 +41,7 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about-me"
-      className="min-h-screen flex items-center justify-center py-12 dark:bg-gray-900 transition-colors"
+      className="min-h-screen flex items-center justify-center pt-12 dark:bg-gray-900 transition-colors"
     >
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
         {/* Left Side: Text Content */}
