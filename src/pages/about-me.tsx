@@ -58,14 +58,6 @@ const AboutMe: React.FC = () => {
             <span className="animate-blinkCaret">|</span> {/* Blinking caret */}
           </h1>
 
-          {/* <a
-            href="/path/to/your/resume.pdf" // Update this path to your resume file
-            download
-            className="inline-block mt-4 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
-          >
-            Download Resume
-          </a> */}
-
           <a
             href="/Resume.pdf"
             download
