@@ -4,6 +4,7 @@ import AboutMe from "./pages/about-me";
 import WorkExperience from "./pages/work-experience";
 import ProjectsPage from "./pages/project-page";
 import Separator from "./components/text-separator";
+import ContactMe from "./pages/contact-me";
 
 const App: React.FC = () => {
   return (
@@ -18,8 +19,8 @@ const App: React.FC = () => {
       <section id="work-experience" className="dark:bg-gray-900">
         <WorkExperience />
       </section>
-      <section id="contact-me" className="h-screen bg-gray-400 p-10">
-        Contact Me
+      <section id="contact-me" className="dark:bg-gray-900 ">
+        <ContactMe />
       </section>
     </>
   );
