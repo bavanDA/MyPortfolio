@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import girlAvatar from "@/assets/girl-avatar.png";
 
 const AboutMe: React.FC = () => {
-  const [displayedText, setDisplayedText] = useState("creating tools");
+  const staticText = "Creating tools that ";
+  const [displayedText, setDisplayedText] = useState(staticText);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isReplacing, setIsReplacing] = useState(false);
-  const staticText = "Creating tools that ";
   const textParts = [
     "make things easier 💻✨",
     "save time ⏳⚡",
@@ -16,6 +16,7 @@ const AboutMe: React.FC = () => {
   useEffect(() => {
     const typingInterval = setInterval(() => {
       const currentText = textParts[currentTextIndex];
+      if (!currentText) return;
       if (displayedText.length < staticText.length + currentText.length) {
         setDisplayedText(
           (prev) => prev + currentText[displayedText.length - staticText.length]
@@ -41,11 +42,11 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about-me"
-      className="min-h-screen flex items-center justify-center pt-12 dark:bg-gray-900 transition-colors"
+      className=" flex items-center justify-center pt-12 dark:bg-gray-900 transition-colors pb-10"
     >
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
+      <div className="max-w-8xl w-4/5  flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
         {/* Left Side: Text Content */}
-        <div className="md:w-1/2 text-center pr-10 pl-10 md:text-left md:ml-20 text-gray-800 dark:text-gray-200 ">
+        <div className="md:w-1/2 text-center  md:text-left md:ml-20 text-gray-800 dark:text-gray-200 ">
           <h1 className="text-4xl font-bold mb-4 dark:text-glow">
             Hi, I'm Bavan DA
           </h1>
@@ -61,10 +62,10 @@ const AboutMe: React.FC = () => {
           <a
             href="/Resume.pdf"
             download
-            className="relative inline-block text-lg group"
+            className="relative inline-block text-lg group mb-10"
           >
             <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight  text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-              <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+              <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-white"></span>
               <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 dark:bg-gray-600 bg-gray-900 group-hover:-rotate-180 ease"></span>
               <span className="relative">Download CV</span>
             </span>
@@ -75,12 +76,11 @@ const AboutMe: React.FC = () => {
           </a>
         </div>
 
-        {/* Right Side: Image */}
-        <div className="md:w-1/2 flex justify-center md:pr-10">
+        <div className="md:w-1/2 flex justify-center ">
           <img
             src={girlAvatar}
             alt="Girl coding"
-            className="w-64 h-64 object-cover transition-all"
+            className="w-64 md:w-4/5 lg:w-4/5 xl:w-5/6 2xl:w-5/6 h-auto transition-all"
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 {
-  "name": "my-project",
-  "private": true,
+  "name": "my-portfolio",
+  "author": "Bavan DA",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
