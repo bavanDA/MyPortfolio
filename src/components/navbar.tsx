@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900 backdrop-blur-lg shadow-md transition-colors">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-8xl w-4/5 mx-auto flex justify-between items-center px-6 py-4">
         <h1 className="text-2xl font-semibold flex items-center  dark:text-gray-200">
           <img
             src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif"
@@ -34,15 +34,15 @@ const Navbar: React.FC = () => {
         </h1>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8">
-          {["About Me", "My Projects", "Work Experience", "Contact Me"].map(
+        <ul className="hidden md:flex space-x-8 ml-auto ">
+          {["About Me", "Projects", "Work Experiences", "Contact Me"].map(
             (section) => (
               <li key={section}>
                 <Link
                   to={section.toLowerCase().replace(" ", "-")}
                   smooth={true}
                   duration={500}
-                  className="relative cursor-pointer text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition-all after:block after:h-[2px] after:w-0 after:bg-black dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                  className="font-bold relative cursor-pointer text- text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition-all after:block after:h-[2px] after:w-0 after:bg-black dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {section}
                 </Link>
@@ -52,19 +52,27 @@ const Navbar: React.FC = () => {
         </ul>
 
         {/* Icons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ml-10">
           {/* Dark Mode Toggle */}
-          <button onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
+            <button
+            onClick={toggleDarkMode}
+            aria-label="Toggle Dark Mode"
+            className="transition-transform hover:scale-110"
+            >
             {darkMode ? (
-              <Sun size={24} className="text-yellow-400" />
+              <Sun className="text-yellow-400 icon-responsive"  />
             ) : (
-              <Moon size={24} className="text-blue-400" />
+              <Moon  className="text-blue-400 icon-responsive " />
             )}
-          </button>
+            </button>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} className="text-dark-icon" /> : <Menu size={28}className="text-dark-icon" />}
+            {isOpen ? (
+              <X size={28} className="text-dark-icon" />
+            ) : (
+              <Menu size={28} className="text-dark-icon" />
+            )}
           </button>
         </div>
       </div>

@@ -11,7 +11,7 @@ const ContactMe: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-4xl p-6 mx-auto space-y-10 dark:bg-gray-900">
+    <div className="max-w-8xl w-4/5  p-6 mx-auto space-y-10 dark:bg-gray-900">
 
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
 
