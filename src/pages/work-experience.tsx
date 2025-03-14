@@ -6,7 +6,7 @@ const WorkExperience: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="max-w-8xl w-4/5 mx-auto space-y-8 dark:bg-gray-900 p-4 pt-10">
+    <div className="max-w-8xl w-4/5 mx-auto space-y-8 dark:bg-gray-900 p-4 px-10 pt-10">
       <TextSeparator text="Work Experience" />
 
       {experiences.map(

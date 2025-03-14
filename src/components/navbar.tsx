@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900 backdrop-blur-lg shadow-md transition-colors">
-      <div className="max-w-8xl w-4/5 mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-8xl w-4/5 mx-auto  flex justify-between items-center px-6 py-4">
         <h1 className="text-2xl font-semibold flex items-center  dark:text-gray-200">
           <img
             src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif"
@@ -54,17 +54,17 @@ const Navbar: React.FC = () => {
         {/* Icons */}
         <div className="flex items-center space-x-4 ml-10">
           {/* Dark Mode Toggle */}
-            <button
+          <button
             onClick={toggleDarkMode}
             aria-label="Toggle Dark Mode"
             className="transition-transform hover:scale-110"
-            >
+          >
             {darkMode ? (
-              <Sun className="text-yellow-400 icon-responsive"  />
+              <Sun className="text-yellow-400 icon-responsive" />
             ) : (
-              <Moon  className="text-blue-400 icon-responsive " />
+              <Moon className="text-blue-400 icon-responsive " />
             )}
-            </button>
+          </button>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden flex flex-col items-center space-y-6 bg-white dark:bg-gray-900 py-6 shadow-md">
-          {["About Me", "My Projects", "Work Experience", "Contact Me"].map(
+          {["About Me", "Projects", "Work Experiences", "Contact Me"].map(
             (section) => (
               <li key={section}>
                 <Link
