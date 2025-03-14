@@ -42,11 +42,11 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about-me"
-      className=" flex items-center justify-center pt-12 dark:bg-gray-900 transition-colors pb-10"
+      className=" flex items-center   justify-center pt-12 dark:bg-gray-900 transition-colors pb-10"
     >
-      <div className="max-w-8xl w-4/5  flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
+      <div className="max-w-8xl w-4/5 flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0">
         {/* Left Side: Text Content */}
-        <div className="md:w-1/2 text-center  md:text-left md:ml-20 text-gray-800 dark:text-gray-200 ">
+        <div className="md:w-1/2  2lg:ml-50 text-center  md:text-left md:ml-20 text-gray-800 dark:text-gray-200 ">
           <h1 className="text-4xl font-bold mb-4 dark:text-glow">
             Hi, I'm Bavan DA
           </h1>
@@ -80,7 +80,7 @@ const AboutMe: React.FC = () => {
           <img
             src={girlAvatar}
             alt="Girl coding"
-            className="w-64 md:w-4/5 lg:w-4/5 xl:w-5/6 2xl:w-5/6 h-auto transition-all"
+            className="w-64 md:w-4/5 lg:w-4/5 xl:w-3/6 2xl:w-3/6 h-auto transition-all"
           />
         </div>
       </div>

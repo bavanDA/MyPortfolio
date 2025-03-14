@@ -20,15 +20,15 @@
     }
 
     @media (min-width: 1500px) {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @media (min-width: 2160px) {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     @media (min-width: 2880px) {
-      font-size: 46px;
+      font-size: 30px;
     }
   }
 }
@@ -45,22 +45,12 @@
     }
   }
 
-  @media (min-width: 1920px) {
-    .icon-responsive {
-      width: 40px;
-      height: 40px;
-    }
-  }
+
   @media (min-width: 2160px) {
     .icon-responsive {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
     }
   }
-  @media (min-width: 2880px) {
-    .icon-responsive {
-      width: 100px;
-      height: 100px;
-    }
-  }
+
 }

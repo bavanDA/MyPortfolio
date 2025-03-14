@@ -8,7 +8,7 @@ const ProjectsPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="max-w-8xl w-4/5 mx-auto space-y-8 dark:bg-gray-900">
+    <div className="max-w-8xl w-4/5 px-10  mx-auto space-y-8 dark:bg-gray-900">
       <TextSeparator text="My Projects" />
 
       {projects.map((project: Project) => (
