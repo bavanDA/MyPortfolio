@@ -22,8 +22,8 @@ const Navbar: React.FC = () => {
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900 backdrop-blur-lg shadow-md transition-colors">
-      <div className="max-w-8xl w-4/5 mx-auto  flex justify-between items-center px-6 py-4">
+    <nav className="fixed z-20 top-0 left-0 w-full bg-white/80 dark:bg-gray-900 backdrop-blur-lg shadow-md transition-colors">
+      <div className="max-w-8xl md:w-4/5  mx-auto  flex justify-between items-center px-6 py-4">
         <h1 className="text-2xl font-semibold flex items-center  dark:text-gray-200">
           <img
             src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif"
@@ -60,9 +60,9 @@ const Navbar: React.FC = () => {
             className="transition-transform hover:scale-110"
           >
             {darkMode ? (
-              <Sun className="text-yellow-400 icon-responsive" />
-            ) : (
               <Moon className="text-blue-400 icon-responsive " />
+            ) : (
+              <Sun className="text-yellow-400 icon-responsive" />
             )}
           </button>
 
