@@ -53,12 +53,10 @@ export const experiences = [
     position: "Android Developer",
     date: "SEP 2020 – FEB 2021",
     description: [
-      "Users can select their country and search for jobs based on keywords and location.",
-      "Users can filter jobs by distance and source and sort them by date or title.",
-      "Users can subscribe to push notifications to receive daily job updates.",
-      "Users can bookmark jobs for later.",
-      "Users can view job descriptions directly within the app.",
-      "The app is integrated with an API to fetch real-time job listings.",
+      "Developed a personalized job search feature, allowing users to filter by location, keywords, distance, and source, resulting in doubled engagement",
+      "Integrated push notifications for daily updates and job bookmarking functionality using BroadcastReceiver, WorkManager, and AlarmManager, with persistent data storage via SharedPreferences and Gson (AndroidX, Gson)",
+      "Integrated with a custom API to retrieve and process job data",
+      "Enhanced app stability and analytics by integrating Microsoft App Center for crash reporting ",
     ],
     images: [
       "/experience/js1.png",
