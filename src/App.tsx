@@ -5,6 +5,7 @@ import WorkExperience from "./pages/work-experience";
 import ProjectsPage from "./pages/project-page";
 import Separator from "./components/text-separator";
 import ContactMe from "./pages/contact-me";
+import Footer from "./components/footer";
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
       <section id="contact-me" className="dark:bg-gray-900 ">
         <ContactMe />
       </section>
+      <Footer />
     </div>
   );
 };
