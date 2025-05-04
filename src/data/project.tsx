@@ -10,7 +10,6 @@ export const projects = [
     ],
     githubLinkFrontend: "https://github.com/bavanDA/mini-wiki",
     githubLinkBackend: "https://github.com/bavanDA/mini-wiki-api",
-    liveModeLink: "https://mini-wiki-tau.vercel.app/",
   },
   {
     id: 2,
